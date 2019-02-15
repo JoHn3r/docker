@@ -1,0 +1,8 @@
+version: '3.7'
+services:
+  home:
+    image: alpine-home:rc1
+    build:
+      context: .
+    volumes:
+      - C:\Users\eric.travers.POLIRIS\Documents\projects\:/home_dir
