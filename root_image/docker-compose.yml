@@ -1,9 +1,13 @@
 version: '3.7'
 services:
-  home:
-    image: alpine-home:rc1
+  base:
+    image: pyhome:rc1
     build:
       context: .
+    ports:
+      - 5000:5000
     volumes:
-      - C:\Users\eric.travers.POLIRIS\Documents\projects\:/home_dir
-      - //var/run/docker.sock:/var/run/docker.sock
+      - /home/eric/Documents/projects/:/home_dir      
+      #- C:\Users\eric.travers.POLIRIS\Documents\projects\:/home_dir
+      - /var/run/docker.sock:/var/run/docker.sock
+    entrypoint: /workspace/docker-entrypoint.sh
