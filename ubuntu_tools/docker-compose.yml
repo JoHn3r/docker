@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  base:
+    image: ubutools:rc1
+    build:
+      context: .
+    ports:
+      - 5000:5000
+    volumes:
+      - /home/eric/Documents/projects/:/home_dir      
+      #- C:\Users\eric.travers.POLIRIS\Documents\projects\:/home_dir
+      #- /var/run/docker.sock:/var/run/docker.sock
+    #entrypoint: /workspace/docker-entrypoint.sh
